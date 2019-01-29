@@ -1,22 +1,26 @@
 
-def seleccion(A):
-    for i in range(len(A)):
-        minimo=i
 
-        for j in range(i,len(A)):
-            print(A[minimo],A[j])
+lista_n = [6, 5, 3, 1, 8, 7, 2, 4, ]
 
-            if(A[j]<A[minimo]):
+def ordenamiento_insercion(lista_n):
+    for i in range(len(lista_n)):
+        minimo = i
+
+        for j in range(i,len(lista_n)):
+            print(lista_n[minimo],lista_n[j])
+
+            if lista_n[j]<lista_n[minimo]:
                 minimo=j
-                print("-->posicion",minimo,"pasa a posicion->", i)
-        if(minimo != i):
-            aux = A[i]
-            A[i] = A[minimo]
-            A[minimo] = aux
-            print(A)
+                print("-->pos",minimo,"pas a pos->", i)
+        if minimo != i:
+            aux = lista_n[i]
+            lista_n[i] = lista_n[minimo]
+            lista_n[minimo] = aux
+            print(lista_n)
 
 
 #ordenamiento por seleccion
-A = [6, 5, 3, 1, 8, 7, 2, 4, ]
-print(A)
-seleccion(A)
+
+
+print(lista_n)
+ordenamiento_insercion(lista_n)
